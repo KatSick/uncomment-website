@@ -1,0 +1,15 @@
+{
+  "title": "//uncomment",
+  "author": "Ostap Chervak & Andrei Zhidkov",
+  "headerTitle": "//uncomment",
+  "description": "// uncomment — podcast about everything in web-tech.",
+  "language": "en-us",
+  "siteUrl": "https://uncomment.fm",
+  "siteRepo": "https://github.com/katsick/uncomment-website",
+  "image": "/static/images/avatar.png",
+  "socialBanner": "/static/images/twitter-card.png",
+  "email": "chervakostap@gmail.com",
+  "github": "https://github.com/katsick/uncomment-website",
+  "twitter": "https://twitter.com/theuncomment",
+  "locale": "en-US"
+}
