@@ -36,8 +36,19 @@ export default function About() {
               використання та різні корисні лайфхаки.
             </p>
             <p>
-              Ведучі: Остап Червак та Андрій Жидков, front-end інженери компанії Grammarly. Час від
-              часу також запрошуємо до наших розмов цікавих гостей з ІТ-індустрії.
+              Ведучі:{' '}
+              <a className="text-gray-900 dark:text-gray-100" href="https://twitter.com/katsickk">
+                Остап Червак
+              </a>{' '}
+              та{' '}
+              <a
+                className="text-gray-900 dark:text-gray-100"
+                href="https://twitter.com/andrei_zhidkov"
+              >
+                Андрій Жидков
+              </a>
+              , front-end інженери компанії Grammarly. Час від часу також запрошуємо до наших розмов
+              цікавих гостей з ІТ-індустрії.
             </p>
             <p>Нові випуски виходять щотретього вівторка.</p>
             <p>
