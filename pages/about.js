@@ -43,7 +43,9 @@ export default function About() {
             <p>
               Якщо вас цікавить світ функціонального програмування і ви захоплюєтесь
               веб-технологіями, приходьте допомагати мені та Андрію у{' '}
-              <a href="https://grammarly.com/jobs">Grammarly</a>
+              <a href="https://www.grammarly.com/jobs/openings?utm_campaign=EB_Kyiv_Jobs_Uncomment&utm_source=uncomment_landing&utm_medium=link&utm_id=rYcXs78TVEDsBw#all:kyiv">
+                Grammarly
+              </a>
             </p>
           </div>
         </div>

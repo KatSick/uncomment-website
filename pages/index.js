@@ -29,7 +29,22 @@ export default function Home({ posts }) {
             Останні випуски
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            {siteMetadata.description}
+            <code>//uncomment</code> — подкаст із дискусіями про вебтехнології, плюси і мінуси
+            їхнього використання та різні корисні лайфхаки. Ведучі:{' '}
+            <a className="text-gray-900 dark:text-gray-100" href="https://twitter.com/katsickk">
+              Остап Червак
+            </a>{' '}
+            та{' '}
+            <a
+              className="text-gray-900 dark:text-gray-100"
+              href="https://twitter.com/andrei_zhidkov"
+            >
+              Андрій Жидков
+            </a>
+            , front-end інженери компанії{' '}
+            <a className="text-gray-900 dark:text-gray-100" href="https://grammarly.com">
+              Grammarly
+            </a>
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
