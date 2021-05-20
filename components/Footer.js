@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <footer className="divide-y divide-gray-200 dark:divide-gray-700">
       <div className="flex flex-col items-center mt-16">
-        <div className="grid grid-cols-4 md:grid-cols-12 gap-4 place-items-center w-full mb-4">
+        <div className="grid grid-cols-4 md:grid-cols-12 gap-4 gap-y-6 place-items-center w-full mb-4">
           <SocialIcon kind="anchor" href="https://anchor.fm/uncomment" className="w-6 h-6" />
           <SocialIcon
             kind="soundcloud"
