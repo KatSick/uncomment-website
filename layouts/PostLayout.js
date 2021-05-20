@@ -5,13 +5,31 @@ import { BlogSeo } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 
-const editUrl = (fileName) => `${siteMetadata.siteRepo}/blob/master/data/blog/${fileName}`
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `${siteMetadata.siteUrl}/blog/${slug}`
   )}`
 
 const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
+
+const Host = ({ name, image, twitterLink, twitterHandle }) => (
+  <>
+    <img src={image} alt={name} className="w-10 h-10 rounded-full" />
+    <dl className="text-sm font-medium leading-5 whitespace-nowrap">
+      <dt className="sr-only">Ім'я</dt>
+      <dd className="text-gray-900 dark:text-gray-100">{name}</dd>
+      <dt className="sr-only">Twitter</dt>
+      <dd>
+        <Link
+          href={twitterLink}
+          className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
+        >
+          {twitterHandle}
+        </Link>
+      </dd>
+    </dl>
+  </>
+)
 
 export default function PostLayout({ children, frontMatter, next, prev }) {
   const { slug, fileName, date, title, tags } = frontMatter
@@ -25,7 +43,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
             <div className="space-y-1 text-center">
               <dl className="space-y-10">
                 <div>
-                  <dt className="sr-only">Published on</dt>
+                  <dt className="sr-only">Опубліковано</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
                       {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
@@ -43,48 +61,24 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <dl className="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200 xl:dark:border-gray-700">
-              <dt className="sr-only">Hosts</dt>
+              <dt className="sr-only">Ведучі</dt>
               <dd>
                 <ul className="flex justify-center space-x-8 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8">
                   <li className="flex items-center space-x-2">
-                    <img
-                      src="https://pbs.twimg.com/profile_images/939510376751869952/OHd77ha7_400x400.jpg"
-                      alt="avatar"
-                      className="w-10 h-10 rounded-full"
+                    <Host
+                      name="Остап Червак"
+                      image="https://pbs.twimg.com/profile_images/939510376751869952/OHd77ha7_400x400.jpg"
+                      twitterLink="https://twitter.com/katsickk"
+                      twitterHandle="@katsickk"
                     />
-                    <dl className="text-sm font-medium leading-5 whitespace-nowrap">
-                      <dt className="sr-only">Name</dt>
-                      <dd className="text-gray-900 dark:text-gray-100">Ostap Chervak</dd>
-                      <dt className="sr-only">Twitter</dt>
-                      <dd>
-                        <Link
-                          href={'https://twitter.com/katsickk'}
-                          className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-                        >
-                          @katsickk
-                        </Link>
-                      </dd>
-                    </dl>
                   </li>
                   <li className="flex items-center space-x-2">
-                    <img
-                      src="https://pbs.twimg.com/profile_images/914052031899369473/aOpRZJiZ_400x400.jpg"
-                      alt="avatar"
-                      className="w-10 h-10 rounded-full"
+                    <Host
+                      name="Андрій Жидков"
+                      image="https://pbs.twimg.com/profile_images/914052031899369473/aOpRZJiZ_400x400.jpg"
+                      twitterLink="https://twitter.com/andrei_zhidkov"
+                      twitterHandle="@andrei_zhidkov"
                     />
-                    <dl className="text-sm font-medium leading-5 whitespace-nowrap">
-                      <dt className="sr-only">Name</dt>
-                      <dd className="text-gray-900 dark:text-gray-100">Andrei Zhidkov</dd>
-                      <dt className="sr-only">Twitter</dt>
-                      <dd>
-                        <Link
-                          href={'https://twitter.com/andrei_zhidkovs'}
-                          className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
-                        >
-                          @andrei_zhidkov
-                        </Link>
-                      </dd>
-                    </dl>
                   </li>
                 </ul>
               </dd>
@@ -93,10 +87,8 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
               <div className="pt-10 pb-8 prose dark:prose-dark max-w-none">{children}</div>
               <div className="pt-6 pb-6 text-sm text-gray-700 dark:text-gray-300">
                 <Link href={discussUrl(slug)} rel="nofollow">
-                  {'Discuss on Twitter'}
+                  Твітнути
                 </Link>
-                {` • `}
-                <Link href={editUrl(fileName)}>{'View on GitHub'}</Link>
               </div>
             </div>
             <footer>
@@ -104,7 +96,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                 {tags && (
                   <div className="py-4 xl:py-8">
                     <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                      Tags
+                      Теги
                     </h2>
                     <div className="flex flex-wrap">
                       {tags.map((tag) => (
@@ -118,7 +110,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                     {prev && (
                       <div>
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                          Previous Article
+                          Попередній випуск
                         </h2>
                         <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
                           <Link href={`/episodes/${prev.slug}`}>{prev.title}</Link>
@@ -128,7 +120,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                     {next && (
                       <div>
                         <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
-                          Next Article
+                          Наступний випуск
                         </h2>
                         <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
                           <Link href={`/episodes/${next.slug}`}>{next.title}</Link>
@@ -143,7 +135,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                   href="/episodes"
                   className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  &larr; Back to the episodes
+                  &larr; До випусків
                 </Link>
               </div>
             </footer>

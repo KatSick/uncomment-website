@@ -6,14 +6,14 @@ export default function About() {
   return (
     <>
       <PageSeo
-        title={`About - ${siteMetadata.author}`}
-        description={`About me - ${siteMetadata.author}`}
+        title={`Про нас - ${siteMetadata.title}`}
+        description={`Про нас - ${siteMetadata.title}`}
         url={`${siteMetadata.siteUrl}/about`}
       />
       <div className="divide-y">
         <div className="pt-6 pb-8 space-y-2 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
-            About
+            Про нас
           </h1>
         </div>
         <div className="items-start space-y-2 xl:grid xl:grid-cols-3 xl:gap-x-8 xl:space-y-0">
@@ -23,16 +23,28 @@ export default function About() {
               alt="avatar"
               className="w-48 h-48 rounded-full"
             />
-            <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">//uncomment</h3>
-            <div className="text-gray-500 dark:text-gray-400">
-              podcast about everything in web-tech
-            </div>
+            <h3 className="pt-4 pb-2 text-2xl font-bold leading-8 tracking-tight">
+              {siteMetadata.title}
+            </h3>
             <div className="flex pt-6 space-x-3">
-              <SocialIcon kind="twitter" href={'https://twitter.com/theuncomment'} />
+              <SocialIcon kind="twitter" href="https://twitter.com/theuncomment" />
             </div>
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
-            <p>Hey! We are young podcast. Stay tuned for updates!</p>
+            <p>
+              {siteMetadata.title} — подкаст із дискусіями про вебтехнології, плюси і мінуси їхнього
+              використання та різні корисні лайфхаки.
+            </p>
+            <p>
+              Ведучі: Остап Червак та Андрій Жидков, front-end інженери компанії Grammarly. Час від
+              часу також запрошуємо до наших розмов цікавих гостей з ІТ-індустрії.
+            </p>
+            <p>Нові випуски виходять щотретього вівторка.</p>
+            <p>
+              Якщо вас цікавить світ функціонального програмування і ви захоплюєтесь
+              веб-технологіями, приходьте допомагати мені та Андрію у{' '}
+              <a href="https://grammarly.com/jobs">Grammarly</a>
+            </p>
           </div>
         </div>
       </div>

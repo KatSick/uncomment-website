@@ -13,11 +13,11 @@ export default function Blog({ posts }) {
   return (
     <>
       <PageSeo
-        title={`Episodes - ${siteMetadata.author}`}
+        title={`Випуски - ${siteMetadata.author}`}
         description={siteMetadata.description}
         url={`${siteMetadata.siteUrl}/episodes`}
       />
-      <ListLayout posts={posts} title="All Episodes" />
+      <ListLayout posts={posts} title="Всі випуски" />
     </>
   )
 }

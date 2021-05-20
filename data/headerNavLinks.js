@@ -1,6 +1,6 @@
 const headerNavLinks = [
-  { href: '/episodes', title: 'Episodes' },
-  { href: '/about', title: 'About' },
+  { href: '/episodes', title: 'Випуски' },
+  { href: '/about', title: 'Про нас' },
 ]
 
 export default headerNavLinks
