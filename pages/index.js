@@ -6,6 +6,7 @@ import { config } from '@/data/config'
 import SocialIcon from '@/components/social-icons'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import AnchorPlayer from '@/components/AnchorPlayer'
+import { Hosts } from '@/components/Hosts'
 
 const MAX_DISPLAY = 5
 
@@ -31,22 +32,8 @@ export default function Home({ posts }) {
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             <code>
               {siteMetadata.title} — подкаст із дискусіями про вебтехнології, плюси і мінуси їхнього
-              використання та різні корисні лайфхаки. Ведучі:{' '}
-              <a className="text-gray-900 dark:text-gray-100" href="https://twitter.com/katsickk">
-                Остап Червак
-              </a>{' '}
-              та{' '}
-              <a
-                className="text-gray-900 dark:text-gray-100"
-                href="https://twitter.com/andrei_zhidkov"
-              >
-                Андрій Жидков
-              </a>
-              , front-end інженери компанії{' '}
-              <a className="text-gray-900 dark:text-gray-100" href="https://grammarly.com">
-                Grammarly
-              </a>
-              .
+              використання та різні корисні лайфхаки. Ведучі: <Hosts />, front-end інженери компанії{' '}
+              <Link href="https://grammarly.com">Grammarly</Link>.
             </code>
           </p>
         </div>

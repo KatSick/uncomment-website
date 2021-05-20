@@ -1,6 +1,8 @@
 import siteMetadata from '@/data/siteMetadata'
 import SocialIcon from '@/components/social-icons'
 import { PageSeo } from '@/components/SEO'
+import { Hosts } from '@/components/Hosts'
+import Link from '@/components/Link'
 
 export default function About() {
   return (
@@ -32,31 +34,19 @@ export default function About() {
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">
             <p>
-              {siteMetadata.title} — подкаст із дискусіями про вебтехнології, плюси і мінуси їхнього
-              використання та різні корисні лайфхаки.
+              <b>{siteMetadata.title}</b> — подкаст із дискусіями про вебтехнології, плюси і мінуси
+              їхнього використання та різні корисні лайфхаки.
             </p>
             <p>
-              Ведучі:{' '}
-              <a className="text-gray-900 dark:text-gray-100" href="https://twitter.com/katsickk">
-                Остап Червак
-              </a>{' '}
-              та{' '}
-              <a
-                className="text-gray-900 dark:text-gray-100"
-                href="https://twitter.com/andrei_zhidkov"
-              >
-                Андрій Жидков
-              </a>
-              , front-end інженери компанії Grammarly. Час від часу також запрошуємо до наших розмов
-              цікавих гостей з ІТ-індустрії.
+              Ведучі: <Hosts />, front-end інженери компанії Grammarly.
             </p>
             <p>Нові випуски виходять щотретього вівторка.</p>
             <p>
               Якщо вас цікавить світ функціонального програмування і ви захоплюєтесь
               веб-технологіями, приходьте допомагати мені та Андрію у{' '}
-              <a href="https://www.grammarly.com/jobs/openings?utm_campaign=EB_Kyiv_Jobs_Uncomment&utm_source=uncomment_landing&utm_medium=link&utm_id=rYcXs78TVEDsBw#all:kyiv">
+              <Link href="https://www.grammarly.com/jobs/openings?utm_campaign=EB_Kyiv_Jobs_Uncomment&utm_source=uncomment_landing&utm_medium=link&utm_id=rYcXs78TVEDsBw#all:kyiv">
                 Grammarly
-              </a>
+              </Link>
             </p>
           </div>
         </div>
