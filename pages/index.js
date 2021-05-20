@@ -45,6 +45,7 @@ export default function Home({ posts }) {
             <a className="text-gray-900 dark:text-gray-100" href="https://grammarly.com">
               Grammarly
             </a>
+            .
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -58,12 +59,14 @@ export default function Home({ posts }) {
                   summary,
                   tags,
                   anchorLink,
-                  spotifyLink,
+                  // spotifyLink,
                   pocketcastsLink,
                   soundcloudLink,
                   embedURL,
+                  breakerLink,
+                  radiopublicLink,
                 } = frontMatter
-                console.log(frontMatter)
+
                 return (
                   <li key={slug} className="py-12">
                     <article>
@@ -108,8 +111,11 @@ export default function Home({ posts }) {
                               <div className="flex mb-3 space-x-4">
                                 <SocialIcon kind="anchor" href={anchorLink} size="8" />
                                 <SocialIcon kind="soundcloud" href={soundcloudLink} size="8" />
-                                <SocialIcon kind="spotify" href={spotifyLink} size="8" />
+                                {/* not working in Ukraine */}
+                                {/* <SocialIcon kind="spotify" href={spotifyLink} size="8" /> */}
                                 <SocialIcon kind="pocketcasts" href={pocketcastsLink} size="8" />
+                                <SocialIcon kind="breaker" href={breakerLink} size="8" />
+                                <SocialIcon kind="radiopublic" href={radiopublicLink} size="8" />
                               </div>
                             </div>
 

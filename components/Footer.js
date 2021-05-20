@@ -15,6 +15,21 @@ export default function Footer() {
             size="6"
           />
           <SocialIcon kind="anchor" href={`https://anchor.fm/uncomment`} size="6" />
+          <SocialIcon
+            kind="breaker"
+            href={`https://www.breaker.audio/slash-slash-uncomment`}
+            size="6"
+          />
+          <SocialIcon
+            kind="radiopublic"
+            href={`https://radiopublic.com/uncomment-6rjnzz`}
+            size="6"
+          />
+          <SocialIcon
+            kind="googlepodcasts"
+            href={`https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy81YWUyMjFiMC9wb2RjYXN0L3Jzcw==`}
+            size="6"
+          />
           <SocialIcon kind="pocketcasts" href={`https://pca.st/sbtk3yg0`} size="6" />
           <SocialIcon kind="rss" href={`https://uncomment.fm/index.xml`} size="6" />
         </div>

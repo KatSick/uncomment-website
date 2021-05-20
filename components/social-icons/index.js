@@ -9,6 +9,9 @@ import Spotify from './spotify.svg'
 import PocketCasts from './pocketcasts.svg'
 import Anchor from './anchor.svg'
 import RSS from './rss.svg'
+import Breaker from './breaker.svg'
+import Radiopublic from './radiopublic.svg'
+import Googlepodcasts from './googlepodcasts.svg'
 
 // Icons taken from: https://simpleicons.org/
 
@@ -24,6 +27,9 @@ const components = {
   pocketcasts: PocketCasts,
   anchor: Anchor,
   rss: RSS,
+  breaker: Breaker,
+  radiopublic: Radiopublic,
+  googlepodcasts: Googlepodcasts,
 }
 
 const SocialIcon = ({ kind, href, size = 8 }) => {
