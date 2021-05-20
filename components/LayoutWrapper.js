@@ -13,33 +13,23 @@ const LayoutWrapper = ({ children }) => {
       <div className="flex flex-col justify-between h-screen">
         <header className="flex items-center justify-between py-10">
           <div>
-            <Link href="/" aria-label="uncomment">
-              <div className="flex items-center justify-between">
-                {/* <div className="mr-3">
-                  <Logo />
-                </div> */}
-                {typeof siteMetadata.headerTitle === 'string' ? (
-                  <code className="hidden h-6 text-2xl font-semibold sm:block">
-                    {siteMetadata.headerTitle}
-                  </code>
-                ) : (
-                  siteMetadata.headerTitle
-                )}
+            <Link href="/" aria-label={siteMetadata.headerTitle}>
+              <div className="flex items-center justify-between text-2xl font-bold">
+                <Logo className="w-12 fill-gray-900 dark:fill-gray-200 stroke-gray-200 dark:stroke-gray-900" />
+                <span className="sr-only sm:not-sr-only">{siteMetadata.headerTitle}</span>
               </div>
             </Link>
           </div>
           <div className="flex items-center text-base leading-5">
-            <div className="hidden sm:block">
-              {headerNavLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
-                >
-                  {link.title}
-                </Link>
-              ))}
-            </div>
+            {headerNavLinks.map((link) => (
+              <Link
+                key={link.title}
+                href={link.href}
+                className="p-1 font-medium text-gray-900 sm:p-4 dark:text-gray-100"
+              >
+                {link.title}
+              </Link>
+            ))}
             <ThemeSwitch />
             <MobileNav />
           </div>

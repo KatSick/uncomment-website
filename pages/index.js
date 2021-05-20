@@ -1,13 +1,11 @@
 import Link from '@/components/Link'
-import dynamic from 'next/dynamic'
 import { PageSeo } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { config } from '@/data/config'
-import SocialIcon from '@/components/social-icons'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import { Hosts } from '@/components/Hosts'
-const AnchorPlayer = dynamic(() => import('@/components/AnchorPlayer'), { ssr: false })
+import { PodcastContent } from '@/components/PodcastContent'
 
 const MAX_DISPLAY = 5
 
@@ -30,32 +28,20 @@ export default function Home({ posts }) {
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Останні випуски
           </h1>
-          <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
-            <code>
-              {siteMetadata.title} — подкаст із дискусіями про вебтехнології, плюси і мінуси їхнього
-              використання та різні корисні лайфхаки. Ведучі: <Hosts />, front-end інженери компанії{' '}
-              <Link href="https://grammarly.com">Grammarly</Link>.
-            </code>
+          <p className="text-lg font-mono leading-7 text-gray-600 dark:text-gray-300">
+            {siteMetadata.title} — подкаст із дискусіями про вебтехнології, плюси і мінуси їхнього
+            використання та різні корисні лайфхаки. Ведучі: <Hosts />, front-end інженери компанії{' '}
+            <Link className="text-gray-900 dark:text-gray-100" href="https://grammarly.com">
+              Grammarly
+            </Link>
+            .
           </p>
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {posts.length === 0
             ? 'Випуски відсутні'
             : posts.slice(0, MAX_DISPLAY).map((frontMatter) => {
-                const {
-                  slug,
-                  date,
-                  title,
-                  summary,
-                  tags,
-                  anchorLink,
-                  // spotifyLink,
-                  pocketcastsLink,
-                  soundcloudLink,
-                  embedURL,
-                  breakerLink,
-                  radiopublicLink,
-                } = frontMatter
+                const { slug, date, title, summary, tags } = frontMatter
 
                 return (
                   <li key={slug} className="py-12">
@@ -63,7 +49,7 @@ export default function Home({ posts }) {
                       <div className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                         <dl>
                           <dt className="sr-only">Опубліковано</dt>
-                          <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                          <dd className="text-base font-medium leading-6 text-gray-600 dark:text-gray-300">
                             <time dateTime={date}>
                               {new Date(date).toLocaleDateString(
                                 siteMetadata.locale,
@@ -89,29 +75,11 @@ export default function Home({ posts }) {
                                 ))}
                               </div>
                             </div>
-                            <div className="prose text-gray-500 max-w-none dark:text-gray-400">
+                            <div className="prose text-gray-600 max-w-none dark:text-gray-300">
                               {summary}
                             </div>
 
-                            <div className="prose text-gray-500 max-w-none dark:text-gray-400">
-                              Слухати випуск на:
-                            </div>
-
-                            <div className="prose text-gray-500 max-w-none dark:text-gray-400">
-                              <div className="flex mb-3 space-x-4">
-                                <SocialIcon kind="anchor" href={anchorLink} size="8" />
-                                <SocialIcon kind="soundcloud" href={soundcloudLink} size="8" />
-                                {/* not working in Ukraine */}
-                                {/* <SocialIcon kind="spotify" href={spotifyLink} size="8" /> */}
-                                <SocialIcon kind="pocketcasts" href={pocketcastsLink} size="8" />
-                                <SocialIcon kind="breaker" href={breakerLink} size="8" />
-                                <SocialIcon kind="radiopublic" href={radiopublicLink} size="8" />
-                              </div>
-                            </div>
-
-                            <div className="prose text-gray-500 max-w-none dark:text-gray-400">
-                              <AnchorPlayer url={embedURL} />
-                            </div>
+                            <PodcastContent {...frontMatter} />
                           </div>
                           <div className="text-base font-medium leading-6">
                             <Link

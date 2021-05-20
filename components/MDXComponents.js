@@ -1,10 +1,10 @@
 import Image from 'next/image'
 import CustomLink from './Link'
-import AnchorPlayer from './AnchorPlayer'
+import { PodcastContent } from './PodcastContent'
 
 const MDXComponents = {
   Image,
-  AnchorPlayer,
+  PodcastContent,
   a: CustomLink,
 }
 

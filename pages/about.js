@@ -29,7 +29,11 @@ export default function About() {
               {siteMetadata.title}
             </h3>
             <div className="flex pt-6 space-x-3">
-              <SocialIcon kind="twitter" href="https://twitter.com/theuncomment" />
+              <SocialIcon
+                kind="twitter"
+                href="https://twitter.com/theuncomment"
+                className="w-8 h-8"
+              />
             </div>
           </div>
           <div className="pt-8 pb-8 prose dark:prose-dark max-w-none xl:col-span-2">

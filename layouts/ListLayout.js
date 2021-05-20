@@ -53,7 +53,7 @@ export default function ListLayout({ posts: episodes, title }) {
                     <article className="space-y-2 xl:grid xl:grid-cols-4 xl:space-y-0 xl:items-baseline">
                       <dl>
                         <dt className="sr-only">Опубліковано</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                        <dd className="text-base font-medium leading-6 text-gray-600 dark:text-gray-300">
                           <time dateTime={date}>
                             {new Date(date).toLocaleDateString(
                               siteMetadata.locale,
@@ -78,7 +78,7 @@ export default function ListLayout({ posts: episodes, title }) {
                             ))}
                           </div>
                         </div>
-                        <div className="prose text-gray-500 max-w-none dark:text-gray-400">
+                        <div className="prose text-gray-600 max-w-none dark:text-gray-300">
                           {summary}
                         </div>
                       </div>

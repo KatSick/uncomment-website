@@ -25,7 +25,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
               <dl className="space-y-10">
                 <div>
                   <dt className="sr-only">Опубліковано</dt>
-                  <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
+                  <dd className="text-base font-medium leading-6 text-gray-600 dark:text-gray-300">
                     <time dateTime={date}>
                       {new Date(date).toLocaleDateString(siteMetadata.locale, config.dateFormat)}
                     </time>
@@ -54,7 +54,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
               <div className="text-sm font-medium leading-5 divide-gray-200 xl:divide-y dark:divide-gray-700 xl:col-start-1 xl:row-start-2">
                 {tags && (
                   <div className="py-4 xl:py-8">
-                    <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+                    <h2 className="text-xs tracking-wide text-gray-600 uppercase dark:text-gray-300">
                       Теги
                     </h2>
                     <div className="flex flex-wrap">
@@ -68,7 +68,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                   <div className="flex justify-between py-4 xl:block xl:space-y-8 xl:py-8">
                     {prev && (
                       <div>
-                        <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+                        <h2 className="text-xs tracking-wide text-gray-600 uppercase dark:text-gray-300">
                           Попередній випуск
                         </h2>
                         <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
@@ -78,7 +78,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                     )}
                     {next && (
                       <div>
-                        <h2 className="text-xs tracking-wide text-gray-500 uppercase dark:text-gray-400">
+                        <h2 className="text-xs tracking-wide text-gray-600 uppercase dark:text-gray-300">
                           Наступний випуск
                         </h2>
                         <div className="text-blue-500 hover:text-blue-600 dark:hover:text-blue-400">
