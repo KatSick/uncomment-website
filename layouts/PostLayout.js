@@ -3,14 +3,13 @@ import PageTitle from '@/components/PageTitle'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSeo } from '@/components/SEO'
 import Tag from '@/components/Tag'
+import { config } from '@/data/config'
 import siteMetadata from '@/data/siteMetadata'
 
 const discussUrl = (slug) =>
   `https://mobile.twitter.com/search?q=${encodeURIComponent(
     `${siteMetadata.siteUrl}/blog/${slug}`
   )}`
-
-const postDateTemplate = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' }
 
 const Host = ({ name, image, twitterLink, twitterHandle }) => (
   <>
@@ -46,7 +45,7 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
                   <dt className="sr-only">Опубліковано</dt>
                   <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                     <time dateTime={date}>
-                      {new Date(date).toLocaleDateString(siteMetadata.locale, postDateTemplate)}
+                      {new Date(date).toLocaleDateString(siteMetadata.locale, config.dateFormat)}
                     </time>
                   </dd>
                 </div>

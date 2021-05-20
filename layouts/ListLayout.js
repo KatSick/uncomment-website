@@ -1,9 +1,8 @@
 import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
+import { config } from '@/data/config'
 import { useState } from 'react'
-
-const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
 export default function ListLayout({ posts: episodes, title }) {
   const [searchValue, setSearchValue] = useState('')
@@ -58,7 +57,7 @@ export default function ListLayout({ posts: episodes, title }) {
                           <time dateTime={date}>
                             {new Date(date).toLocaleDateString(
                               siteMetadata.locale,
-                              postDateTemplate
+                              config.dateFormat
                             )}
                           </time>
                         </dd>

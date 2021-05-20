@@ -2,12 +2,12 @@ import Link from '@/components/Link'
 import { PageSeo } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
+import { config } from '@/data/config'
 import SocialIcon from '@/components/social-icons'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
 import AnchorPlayer from '@/components/AnchorPlayer'
 
 const MAX_DISPLAY = 5
-const postDateTemplate = { year: 'numeric', month: 'long', day: 'numeric' }
 
 export async function getStaticProps() {
   const posts = await getAllFilesFrontMatter('blog')
@@ -30,7 +30,7 @@ export default function Home({ posts }) {
           </h1>
           <p className="text-lg leading-7 text-gray-500 dark:text-gray-400">
             <code>
-              //uncomment — подкаст із дискусіями про вебтехнології, плюси і мінуси їхнього
+              {siteMetadata.title} — подкаст із дискусіями про вебтехнології, плюси і мінуси їхнього
               використання та різні корисні лайфхаки. Ведучі:{' '}
               <a className="text-gray-900 dark:text-gray-100" href="https://twitter.com/katsickk">
                 Остап Червак
@@ -79,7 +79,7 @@ export default function Home({ posts }) {
                             <time dateTime={date}>
                               {new Date(date).toLocaleDateString(
                                 siteMetadata.locale,
-                                postDateTemplate
+                                config.dateFormat
                               )}
                             </time>
                           </dd>
