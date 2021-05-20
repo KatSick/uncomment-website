@@ -1,12 +1,13 @@
 import Link from '@/components/Link'
+import dynamic from 'next/dynamic'
 import { PageSeo } from '@/components/SEO'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { config } from '@/data/config'
 import SocialIcon from '@/components/social-icons'
 import { getAllFilesFrontMatter } from '@/lib/mdx'
-import AnchorPlayer from '@/components/AnchorPlayer'
 import { Hosts } from '@/components/Hosts'
+const AnchorPlayer = dynamic(() => import('@/components/AnchorPlayer'), { ssr: false })
 
 const MAX_DISPLAY = 5
 
