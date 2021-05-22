@@ -1,7 +1,10 @@
 import dynamic from 'next/dynamic'
 import { SocialIcon } from './social-icons'
 
-const Player = dynamic(() => import('@/components/AnchorPlayer'), { ssr: false })
+const Player = dynamic(
+  () => new Promise((r) => setTimeout(r, 1500)).then(() => import('@/components/AnchorPlayer')),
+  { ssr: false }
+)
 
 export const PodcastContent = ({
   anchorLink,
@@ -29,6 +32,8 @@ export const PodcastContent = ({
       {/* <SocialIcon kind="breaker" href={breakerLink} className="w-8 h-8" /> */}
       {/* <SocialIcon kind="radiopublic" href={radiopublicLink} className="w-8 h-8" /> */}
     </div>
-    <Player url={embedURL} />
+    <div className="h-24">
+      <Player url={embedURL} />
+    </div>
   </div>
 )
