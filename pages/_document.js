@@ -21,6 +21,28 @@ class MyDocument extends Document {
     return (
       <Html lang={siteMetadata.locale}>
         <Head>
+          <link
+            rel="preload"
+            href="/static/fonts/inter-v3-latin_cyrillic-regular.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="true"
+          />
+          <link
+            rel="preload"
+            href="/static/fonts/inter-v3-latin_cyrillic-600.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="true"
+          />
+          <link
+            rel="preload"
+            href="/static/fonts/inter-v3-latin_cyrillic-700.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="true"
+          />
+
           <link rel="apple-touch-icon" sizes="57x57" href="/static/favicons/apple-icon-57x57.png" />
           <link rel="apple-touch-icon" sizes="60x60" href="/static/favicons/apple-icon-60x60.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/static/favicons/apple-icon-72x72.png" />
@@ -95,11 +117,6 @@ class MyDocument extends Document {
           <meta name="msapplication-TileColor" content="#000000" />
           <meta name="theme-color" content="#000000" />
           <link rel="alternate" type="application/rss+xml" href="/index.xml" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-            rel="stylesheet"
-          />
           <Analytics />
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">

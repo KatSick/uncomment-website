@@ -4,6 +4,12 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 
 module.exports = withBundleAnalyzer({
   reactStrictMode: true,
+  optimizeFonts: false,
+  poweredByHeader: false,
+  experimental: {
+    optimizeCss: true,
+    optimizeImages: true,
+  },
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],
   future: {
     webpack5: true,
