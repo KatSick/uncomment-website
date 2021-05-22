@@ -23,23 +23,23 @@ class MyDocument extends Document {
         <Head>
           <link
             rel="preload"
-            href="/static/fonts/inter-v3-latin_cyrillic-regular.woff"
+            href="/static/fonts/inter-v3-latin_cyrillic-regular.woff2"
             as="font"
-            type="font/woff"
+            type="font/woff2"
             crossOrigin="true"
           />
           <link
             rel="preload"
-            href="/static/fonts/inter-v3-latin_cyrillic-600.woff"
+            href="/static/fonts/inter-v3-latin_cyrillic-600.woff2"
             as="font"
-            type="font/woff"
+            type="font/woff2"
             crossOrigin="true"
           />
           <link
             rel="preload"
-            href="/static/fonts/inter-v3-latin_cyrillic-700.woff"
+            href="/static/fonts/inter-v3-latin_cyrillic-700.woff2"
             as="font"
-            type="font/woff"
+            type="font/woff2"
             crossOrigin="true"
           />
 
@@ -118,6 +118,27 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#000000" />
           <link rel="alternate" type="application/rss+xml" href="/index.xml" />
           <Analytics />
+          <link
+            rel="preload"
+            href="/static/fonts/inter-v3-latin_cyrillic-regular.woff"
+            as="font"
+            type="font/woff"
+            crossOrigin="true"
+          />
+          <link
+            rel="preload"
+            href="/static/fonts/inter-v3-latin_cyrillic-600.woff"
+            as="font"
+            type="font/woff"
+            crossOrigin="true"
+          />
+          <link
+            rel="preload"
+            href="/static/fonts/inter-v3-latin_cyrillic-700.woff"
+            as="font"
+            type="font/woff"
+            crossOrigin="true"
+          />
         </Head>
         <body className="antialiased text-black bg-white dark:bg-gray-900 dark:text-white">
           <Main />
