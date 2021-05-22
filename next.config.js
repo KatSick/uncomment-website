@@ -9,6 +9,7 @@ module.exports = withBundleAnalyzer({
   experimental: {
     optimizeCss: {
       inlineFonts: true,
+      // Remove fronts: true when https://github.com/GoogleChromeLabs/critters/pull/73
       fonts: true,
     },
     optimizeImages: true,
