@@ -7,7 +7,10 @@ module.exports = withBundleAnalyzer({
   optimizeFonts: false,
   poweredByHeader: false,
   experimental: {
-    optimizeCss: true,
+    optimizeCss: {
+      inlineFonts: true,
+      fonts: true,
+    },
     optimizeImages: true,
   },
   pageExtensions: ['js', 'jsx', 'md', 'mdx'],

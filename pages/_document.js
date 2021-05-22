@@ -21,28 +21,6 @@ class MyDocument extends Document {
     return (
       <Html lang={siteMetadata.locale}>
         <Head>
-          <link
-            rel="preload"
-            href="/static/fonts/inter-v3-latin_cyrillic-regular.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="true"
-          />
-          <link
-            rel="preload"
-            href="/static/fonts/inter-v3-latin_cyrillic-600.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="true"
-          />
-          <link
-            rel="preload"
-            href="/static/fonts/inter-v3-latin_cyrillic-700.woff2"
-            as="font"
-            type="font/woff2"
-            crossOrigin="true"
-          />
-
           <link rel="apple-touch-icon" sizes="57x57" href="/static/favicons/apple-icon-57x57.png" />
           <link rel="apple-touch-icon" sizes="60x60" href="/static/favicons/apple-icon-60x60.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/static/favicons/apple-icon-72x72.png" />
