@@ -21,26 +21,25 @@ class MyDocument extends Document {
     return (
       <Html lang={siteMetadata.locale}>
         <Head>
-          {/* Remove this preloads when https://github.com/GoogleChromeLabs/critters/pull/73 */}
           <link
             rel="preload"
-            href="/static/fonts/inter-v3-latin_cyrillic-regular.woff2"
+            href="/static/fonts/inter-v3-latin_cyrillic-regular.woff"
             as="font"
-            type="font/woff2"
+            type="font/woff"
             crossOrigin="true"
           />
           <link
             rel="preload"
-            href="/static/fonts/inter-v3-latin_cyrillic-600.woff2"
+            href="/static/fonts/inter-v3-latin_cyrillic-600.woff"
             as="font"
-            type="font/woff2"
+            type="font/woff"
             crossOrigin="true"
           />
           <link
             rel="preload"
-            href="/static/fonts/inter-v3-latin_cyrillic-700.woff2"
+            href="/static/fonts/inter-v3-latin_cyrillic-700.woff"
             as="font"
-            type="font/woff2"
+            type="font/woff"
             crossOrigin="true"
           />
 
