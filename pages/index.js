@@ -1,5 +1,7 @@
 import Link from '@/components/Link'
 import { PageSeo } from '@/components/SEO'
+import PodcastIcons from '@/components/PodcastIcons'
+import SocialIcon from '@/components/social-icons'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import { config } from '@/data/config'
@@ -28,6 +30,7 @@ export default function Home({ posts }) {
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
             Останні випуски
           </h1>
+          <PodcastIcons />
           <p className="text-lg font-mono leading-7 text-gray-600 dark:text-gray-300">
             {siteMetadata.title} — подкаст із дискусіями про вебтехнології, плюси і мінуси їхнього
             використання та різні корисні лайфхаки. Ведучі: <Hosts />, front-end інженери компанії{' '}

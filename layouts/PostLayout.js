@@ -1,5 +1,6 @@
 import Link from '@/components/Link'
 import PageTitle from '@/components/PageTitle'
+import PodcastIcons from '@/components/PodcastIcons'
 import SectionContainer from '@/components/SectionContainer'
 import { BlogSeo } from '@/components/SEO'
 import Tag from '@/components/Tag'
@@ -34,11 +35,12 @@ export default function PostLayout({ children, frontMatter, next, prev }) {
               </dl>
               <div>
                 <PageTitle>{title}</PageTitle>
+                <PodcastIcons center />
               </div>
             </div>
           </header>
           <div
-            className="pb-8 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6"
+            className="pb-4 divide-y divide-gray-200 xl:divide-y-0 dark:divide-gray-700 xl:grid xl:grid-cols-4 xl:gap-x-6"
             style={{ gridTemplateRows: 'auto 1fr' }}
           >
             <HostProfiles />
