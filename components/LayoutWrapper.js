@@ -4,6 +4,7 @@ import Logo from '@/data/logo.svg'
 import Link from './Link'
 import SectionContainer from './SectionContainer'
 import Footer from './Footer'
+import SocialIcon from '@/components/social-icons'
 
 const LayoutWrapper = ({ children }) => {
   return (
@@ -30,6 +31,8 @@ const LayoutWrapper = ({ children }) => {
             ))}
             {/* <ThemeSwitch /> */}
             {/* <MobileNav /> */}
+
+            <SocialIcon kind="twitter" href={siteMetadata.twitter} className="w-6 h-6" />
           </div>
         </header>
         <main className="mb-auto">{children}</main>
