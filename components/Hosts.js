@@ -35,7 +35,7 @@ export const HostProfiles = () => (
   <dl className="pt-6 pb-10 xl:pt-11 xl:border-b xl:border-gray-200 xl:dark:border-gray-700">
     <dt className="sr-only">Ведучі</dt>
     <dd>
-      <ul className="flex justify-center space-x-8 xl:block sm:space-x-12 xl:space-x-0 xl:space-y-8">
+      <ul className="flex flex-wrap gap-y-4 xs:flex-nowrap justify-between xs:justify-center xl:block w-full xs:space-x-4 sm:space-x-12 xl:space-x-0 xl:space-y-8">
         <li className="flex items-center space-x-2">
           <Host
             name="Остап Червак"
