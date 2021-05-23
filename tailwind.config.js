@@ -6,6 +6,11 @@ module.exports = {
   purge: ['./pages/**/*.js', './components/**/*.js', './layouts/**/*.js'],
   darkMode: 'media',
   theme: {
+    screens: {
+      xxs: '320px',
+      xs: '475px',
+      ...defaultTheme.screens,
+    },
     extend: {
       spacing: {
         '9/16': '56.25%',

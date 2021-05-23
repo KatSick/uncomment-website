@@ -16,7 +16,6 @@ export const PodcastContent = ({
   embedURL,
 }) => (
   <div className="prose text-gray-600 max-w-none dark:text-gray-300 relative w-full sm:w-96">
-    <p>Слухати випуск:</p>
     <div className="flex justify-between mb-3 space-x-4">
       {/* <SocialIcon kind="anchor" href={anchorLink} className="w-8 h-8" /> */}
       {/* <SocialIcon kind="soundcloud" href={soundcloudLink} className="w-8 h-8" /> */}
