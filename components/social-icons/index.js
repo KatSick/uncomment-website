@@ -13,6 +13,7 @@ import RSS from './rss.svg'
 import Breaker from './breaker.svg'
 import Radiopublic from './radiopublic.svg'
 import Googlepodcasts from './googlepodcasts.svg'
+import Applepodcasts from './applepodcasts.svg'
 
 // Icons taken from: https://simpleicons.org/
 
@@ -31,6 +32,7 @@ const components = {
   breaker: Breaker,
   radiopublic: Radiopublic,
   googlepodcasts: Googlepodcasts,
+  applepodcasts: Applepodcasts,
 }
 
 export const SocialIcon = ({ kind, href, className }) => {

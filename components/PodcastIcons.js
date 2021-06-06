@@ -8,9 +8,15 @@ export default function PodcastIcons({ center }) {
       } gap-3 md:gap-4 w-full mb-4 mt-4`}
     >
       <SocialIcon kind="anchor" href="https://anchor.fm/uncomment" className="w-9 h-9" />
-      <SocialIcon
+      {/* disabled since Spotify does not work in Ukraine */}
+      {/* <SocialIcon
         kind="soundcloud"
         href="https://soundcloud.com/uncommentpodcast"
+        className="w-9 h-9"
+      /> */}
+      <SocialIcon
+        kind="applepodcasts"
+        href="https://podcasts.apple.com/ua/podcast/uncomment/id1568217870"
         className="w-9 h-9"
       />
       <SocialIcon
@@ -34,7 +40,7 @@ export default function PodcastIcons({ center }) {
         className="hidden xs:block w-9 h-9"
       />
       <SocialIcon kind="pocketcasts" href="https://pca.st/sbtk3yg0" className="w-9 h-9" />
-      <SocialIcon kind="rss" href="https://uncomment.fm/index.xml" className="w-9 h-9" />
+      <SocialIcon kind="rss" href="https://anchor.fm/s/5ae221b0/podcast/rss" className="w-9 h-9" />
     </div>
   )
 }
