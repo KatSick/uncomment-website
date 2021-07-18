@@ -9,9 +9,9 @@
     "not op_mini all"
   ],
   "scripts": {
-    "start": "TAILWIND_MODE=watch NODE_ENV=development next-remote-watch ./data",
-    "build": "NODE_ENV=production next build && node ./scripts/generate-sitemap",
-    "serve": "NODE_ENV=development next start",
+    "start": "cross-env TAILWIND_MODE=watch NODE_ENV=development next-remote-watch ./data",
+    "build": "cross-env NODE_ENV=production next build && node ./scripts/generate-sitemap",
+    "serve": "cross-env NODE_ENV=development next start",
     "analyze": "env ANALYZE=true next build",
     "prepare": "husky install",
     "fmt": "prettier --write \"**/*.{js,jsx,json,ts,tsx,md,mdx,css,html,yml,yaml}\" --ignore-path .gitignore"
@@ -48,6 +48,7 @@
     "@tailwindcss/jit": "^0.1.18",
     "array-filter": "^1.0.0",
     "critters": "^0.0.10",
+    "cross-env": "^7.0.3",
     "eslint": "^7.17.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
